@@ -5,6 +5,7 @@
 
         <meta charset="UTF-8"/>
         <title>Havuz Problemi</title>
+        <link rel="stylesheet" href="style.css"/>
 
         <script>
 
@@ -21,26 +22,28 @@
 
         </script>
 
-        <style>
-
-            body {
-
-                text-align: center;
-            }
-
-        </style>
-
     </head>
 
     <body>
 
-        <h2>Havuz Problemi</h2>
+        <h2>Havuz Problemi Örnek Uygulama</h2>
 
-        Saatte <input type="text" id="dolduran_musluk" style="width: 40px"/></input> m<sup>3</sup> dolduruyor. <br>
-        Saatte <input type="text" id="bosaltan_musluk" style="width: 40px"/></input> m<sup>3</sup> boşaltıyor. <br><br>
-        <p>Havuz 10m<sup>3</sup> ise...</p>
-        <input type="text" id="saat" style="width: 40px"/> saat sonra <meter id="oran" value="0" style="height: 30px; width: 100px"></meter> oranında dolu olur.
-        <br><br>
+        <div id="kutu">
+
+            <div id="alan1">
+                <p>Saatte <input type="text" id="dolduran_musluk" style="width: 40px"/></input> m<sup>3</sup> dolduruyor.</p> <br>
+                <p>Saatte <input type="text" id="bosaltan_musluk" style="width: 40px"/></input> m<sup>3</sup> boşaltıyor.</p>
+            </div>
+
+            <br>
+    
+            <div id="alan2">
+                <p>Havuz 10m<sup>3</sup> ise...</p><br>
+                <p><input type="text" id="saat" style="width: 40px"/> saat sonra <progress id="oran" value="0"></progress> oranında dolu olur.</p>
+            </div>
+
+        </div>
+
         <button onclick="hesapla();"/>Havuzun Doluluk Oranını Hesapla</button>
 
     </body>
