@@ -1,0 +1,81 @@
+@import url(./style.css);
+
+@media (width <= 1204px) {
+    .container .title h1 {
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .container .content p {
+        font-size: 14px;
+    }
+}
+
+@media (width <= 880px) {
+    .container button {
+        width: 50%;
+    }
+}
+
+@media (width <= 681px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media (width <= 512px) {
+    .container .title h1 {
+        font-size: 16px;
+    }
+
+    .container .content p {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .container button {
+        width: 40%;
+        height: 40px;
+    }
+
+    #dolduran_musluk, #bosaltan_musluk, #saat {
+        width: 40%;
+    }
+}
+
+@media (width <= 457px) {
+    .container button {
+        width: 30%;
+        height: 36px;
+    }
+}
+
+@media (width <= 445px) {
+    .container .content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .container .box1, .container .box2 {
+        width: 80%;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #dolduran_musluk, #bosaltan_musluk, #saat {
+        width: 30%;
+    }
+
+    .container button {
+        width: 60%;
+        height: 50px;
+    }
+}
+
+@media (width <= 360px) {
+
+    .container .box1, .container .box2 {
+        width: 90%;
+    }
+} 

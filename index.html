@@ -1,51 +1,39 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="tr">
     <head>
-
-        <meta charset="UTF-8"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="/css/responsive.css">
         <title>Havuz Problemi</title>
-        <link rel="stylesheet" href="style.css"/>
-
-        <script>
-
-            function hesapla() {
-
-                var dolum = parseInt(document.getElementById("dolduran_musluk").value);
-                var bosaltim = parseInt(document.getElementById("bosaltan_musluk").value);
-                var sure = parseInt(document.getElementById("saat").value);
-                var sonuc;
-                sonuc = (dolum - bosaltim) * sure / 10;
-
-                document.getElementById("oran").value = sonuc;
-            }
-
-        </script>
-
     </head>
 
     <body>
-
-        <h2>Havuz Problemi Örnek Uygulama</h2>
-
-        <div id="kutu">
-
-            <div id="alan1">
-                <p>Saatte <input type="text" id="dolduran_musluk" style="width: 40px"/></input> m<sup>3</sup> dolduruyor.</p> <br>
-                <p>Saatte <input type="text" id="bosaltan_musluk" style="width: 40px"/></input> m<sup>3</sup> boşaltıyor.</p>
+        <div class="container">
+            <div class="title">
+                <h1>Havuz Problemi Örnek Uygulama</h1>
             </div>
 
-            <br>
-    
-            <div id="alan2">
-                <p>Havuz 10m<sup>3</sup> ise...</p><br>
-                <p><input type="text" id="saat" style="width: 40px"/> saat sonra <progress id="oran" value="0"></progress> oranında dolu olur.</p>
+            <div class="content">
+                <div class="box1">
+                    <p>Saatte <input type="number" id="dolduran_musluk"></input> m<sup>3</sup> dolduruyor.</p>
+                    <p>Saatte <input type="number" id="bosaltan_musluk"></input> m<sup>3</sup> boşaltıyor.</p>
+                </div>
+
+                <div class="box2">
+                    <p>Havuz 10m<sup>3</sup> ise</p>
+                    <p><input type="number" id="saat"> saat sonra</p>
+                    <progress id="oran" value="0"></progress>
+                    <p>oranında dolu olur.</p>
+                </div>
             </div>
 
+            <div class="button-box">
+                <button onclick="hesapla()">Hesapla</button>
+            </div>
         </div>
-
-        <button onclick="hesapla();"/>Havuzun Doluluk Oranını Hesapla</button>
-
+        
+        <script src="./js/script.js"></script>
     </body>
-
 </html>
